@@ -14,10 +14,11 @@ class Default extends Component {
 
                 <Navigation />
 
-                <Switch>
-                    <Route exact path="/" component={Home} />
-                </Switch>
-
+                <div className="default__content">
+                    <Switch>
+                        <Route exact path="/" component={Home} />
+                    </Switch>
+                </div>
             </div>
         );
     }

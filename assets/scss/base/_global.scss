@@ -1,5 +1,6 @@
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 html, body {
@@ -7,7 +8,7 @@ html, body {
     color: $dark;
 }
 
-a, a:href {
+a {
     text-decoration: none;
     color: inherit;
 }

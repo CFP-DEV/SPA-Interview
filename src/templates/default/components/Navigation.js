@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 // Components
+import Logo from '../../../components/Logo';
 import NavigationMenu from './NavigationMenu';
 import NavigationProfile from './NavigationProfile';
 
@@ -9,9 +10,7 @@ class Navigation extends Component {
         return (
             <nav className="navigation">
             
-                <div className="navigation__logo">
-                    L
-                </div>
+                <Logo className="navigation__logo" />
 
                 <NavigationMenu />
 

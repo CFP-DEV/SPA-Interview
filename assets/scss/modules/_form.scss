@@ -1,0 +1,40 @@
+.form {
+    &__group, &__label, &__input, &__message {
+        width: 100%;
+    }
+
+    &__group {
+        margin-bottom: 20px;
+    }
+
+    &__label {
+        font-size: 12px;
+        text-transform: uppercase;
+        line-height: 30px;
+        color: $gray;
+    }
+
+    &__input {
+        height: 60px;
+        border-radius: $radius;
+        border: 1px solid $gray;
+        padding: 0 10px;
+    }
+
+    &__message {
+        font-size: 12px;
+        line-height: 16px;
+        margin-top: 10px;
+        color: $gray;
+    }
+
+    &__group--is-wrong {
+        .form__input {
+            border: 1px solid $red;
+        }
+
+        .form__message {
+            color: $red;
+        }
+    }
+}

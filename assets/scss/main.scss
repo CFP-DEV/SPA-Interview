@@ -9,8 +9,11 @@
 
 // Modules
 @import './modules/btn';
+@import './modules/form';
 
 // Components
+@import './components/logo';
 
 // Views & Templates
-@import'./views/default';
+@import './views/default';
+@import './views/auth';
