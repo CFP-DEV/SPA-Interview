@@ -1,0 +1,107 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+html, body {
+  font-family: "Montserrat", sans-serif;
+  color: #1B1F3B; }
+
+a, a:href {
+  text-decoration: none;
+  color: inherit; }
+
+.btn {
+  height: 60px;
+  padding: 0 20px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; }
+  .btn:hover {
+    cursor: pointer; }
+
+.btn--is-red, .btn--is-yellow, .btn--is-purple {
+  color: #FFFFFF; }
+
+.btn--is-red {
+  background: #EF476F; }
+  .btn--is-red:hover {
+    background: #ed305d; }
+
+.btn--is-yellow {
+  background: #FDE74C; }
+  .btn--is-yellow:hover {
+    background: #fde433; }
+
+.btn--is-purple {
+  background: #623CEA; }
+  .btn--is-purple:hover {
+    background: #4f25e8; }
+
+.btn--is-outline {
+  border: 1px solid #1B1F3B; }
+  .btn--is-outline:hover {
+    background: #1B1F3B;
+    color: #FFFFFF; }
+
+.default .navigation {
+  height: 100vh;
+  width: 140px;
+  background: #F4F4F4;
+  padding: 40px; }
+  .default .navigation__logo, .default .navigation__profile {
+    height: 60px;
+    width: 60px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px; }
+  .default .navigation__logo {
+    background: #EF476F; }
+  .default .navigation__profile {
+    background: #1B1F3B; }
+  .default .navigation__menu {
+    height: calc(100% - 160px);
+    margin: 20px 0;
+    padding: 20px 0;
+    border-top: 1px solid #D4D9E2;
+    border-bottom: 1px solid #D4D9E2; }
+
+/*# sourceMappingURL=main.css.map */

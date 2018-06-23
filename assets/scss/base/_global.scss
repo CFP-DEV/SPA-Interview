@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: $font-1;
+    color: $dark;
+}
+
+a, a:href {
+    text-decoration: none;
+    color: inherit;
+}

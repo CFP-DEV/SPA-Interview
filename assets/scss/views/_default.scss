@@ -1,0 +1,35 @@
+.default {
+    .navigation {
+        height: 100vh;
+        width: 140px;
+        background: $gray-light;
+        padding: 40px;
+    
+        &__logo, &__profile {
+            height: 60px;
+            width: 60px;
+            border-radius: $radius;
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+    
+        &__logo {
+            background: $red;
+        }
+    
+        &__profile {
+            background: $dark;
+        }
+    
+        &__menu {
+            height: calc(100% - 160px);
+            margin: 20px 0;
+            padding: 20px 0;
+            border-top: 1px solid $gray;
+            border-bottom: 1px solid $gray;
+        }
+    }
+}

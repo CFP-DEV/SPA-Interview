@@ -1,0 +1,52 @@
+.btn {
+    height: 60px;
+    padding: 0 20px;
+    background: transparent;
+    border: none;
+    border-radius: $radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.btn--is-red, .btn--is-yellow, .btn--is-purple {
+    color: $white;
+}
+
+.btn--is-red {
+    background: $red;
+
+    &:hover {
+        background: $red-hover;
+    }
+}
+
+.btn--is-yellow {
+    background: $yellow;
+
+    &:hover {
+        background: $yellow-hover;
+    }
+}
+
+.btn--is-purple {
+    background: $purple;
+
+    &:hover {
+        background: $purple-hover;
+    }
+}
+
+.btn--is-outline {
+    border: 1px solid $dark;
+
+    &:hover {
+        background: $dark;
+        color: $white;
+    }
+}
