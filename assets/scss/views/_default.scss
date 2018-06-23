@@ -16,7 +16,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
+            font-size: 14px;
             background: $dark;
         }
     
@@ -26,6 +26,23 @@
             padding: 20px 0;
             border-top: 1px solid $gray;
             border-bottom: 1px solid $gray;
+
+            &__link {
+                height: 60px;
+                width: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+
+                &:hover {
+                    color: $red;
+                }
+            }
+
+            &__link--is-active {
+                color: $red;
+            }
         }
     }
 

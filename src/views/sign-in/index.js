@@ -10,10 +10,10 @@ class SignIn extends Component {
                 
                 <header className="header">
                     <h1 className="header__title">
-                        Thanks for coming back!
+                        Sign In.
                     </h1>
                     <h2 className="header__subtitle">
-                        We are updating our site daily for you.
+                        Thanks for coming back!
                     </h2>
                 </header>
 

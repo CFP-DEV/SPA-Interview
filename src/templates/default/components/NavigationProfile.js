@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NavigationProfile = () => {
     return (
-        <div className="navigation__profile">
-
-        </div>
+        <Link to="/profile" className="navigation__profile">
+            <i className="fas fa-user"></i>
+        </Link>
     );
 }
 

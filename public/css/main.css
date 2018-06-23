@@ -124,6 +124,15 @@ a {
   font-size: 18px;
   background: #EF476F; }
 
+.page-header {
+  width: 100%; }
+  .page-header__title {
+    font-size: 24px; }
+  .page-header__subtitle {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #D4D9E2; }
+
 .default .navigation {
   height: 100vh;
   width: 140px;
@@ -140,7 +149,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 14px;
     background: #1B1F3B; }
   .default .navigation__menu {
     height: calc(100% - 160px);
@@ -148,6 +157,17 @@ a {
     padding: 20px 0;
     border-top: 1px solid #D4D9E2;
     border-bottom: 1px solid #D4D9E2; }
+    .default .navigation__menu__link {
+      height: 60px;
+      width: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px; }
+      .default .navigation__menu__link:hover {
+        color: #EF476F; }
+    .default .navigation__menu__link--is-active {
+      color: #EF476F; }
 
 .default__content {
   width: calc(100% - 140px);
