@@ -11,19 +11,23 @@ class Home extends Component {
 
         this.state = {
             posts: [],
+            isFetching: true,
         }
     }
 
     componentDidMount () {
-        fetch('https://jsonplaceholder.typicode.com/posts?_limit=20')
+        fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
             .then((res) => res.json())
             .then((res) => {
                 this.setState({
                     posts: res,
+                    isFetching: false,
                 });
             })
             .catch((err) => {
-                console.log(err);
+                this.setState({
+                    isFetching: false,
+                });
             });
     }
 
@@ -37,7 +41,7 @@ class Home extends Component {
                 
                 <PageHeader title="Dashboard" subtitle="All news in one place." />
 
-                <Posts data={this.state.posts} />
+                <Posts data={this.state.posts} isFetching={this.state.isFetching} />
 
             </div>
         );

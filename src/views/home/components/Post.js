@@ -1,21 +1,18 @@
 import React from 'react';
 
 const Post = ({data}) => {
+    const description = data.body.slice(0, 60) + '...';
+
     return (
         <article className="post">
-            <footer className="post__author">
-                <div className="post__author__avatar">
-                    { data.userId }
-                </div>
-            </footer>
-            <header className="post__content">
-                <h2 className="post__content__title">
+            <header className="post__header">
+                <h2 className="post__header__title">
                     { data.title }
                 </h2>
-                <p className="post__content__description">
-                    { data.body }
-                </p>
-            </header>
+                <h3 className="post__header__subtitle">
+                    { description }
+                </h3>
+            </header>    
         </article>
     );
 }

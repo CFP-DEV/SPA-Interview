@@ -134,6 +134,31 @@ a {
     margin-top: 10px;
     color: #D4D9E2; }
 
+.spinner {
+  width: 40px;
+  height: 40px;
+  margin: 200px auto;
+  background-color: #333;
+  border-radius: 100%;
+  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+  animation: sk-scaleout 1.0s infinite ease-in-out; }
+
+@-webkit-keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0; } }
+
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0; } }
+
 .profile__form {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -148,30 +173,31 @@ a {
 .home .posts {
   width: 100%;
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px; }
   .home .posts .post {
-    width: 100%;
+    min-height: 220px;
+    background: #F4F4F4;
+    border-radius: 8px;
     display: grid;
-    grid-template-columns: 60px 1fr;
-    grid-gap: 20px; }
-    .home .posts .post__author__avatar {
-      height: 60px;
-      width: 60px;
-      background: #1B1F3B;
-      color: #FFFFFF;
-      font-size: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 8px; }
-    .home .posts .post__content__title {
-      font-size: 14px;
-      margin-bottom: 10px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid #F4F4F4; }
-    .home .posts .post__content__description {
+    align-content: end;
+    padding: 20px; }
+    .home .posts .post__header__title {
       font-size: 14px;
       line-height: 18px; }
+    .home .posts .post__header__subtitle {
+      font-size: 12px;
+      line-height: 16px;
+      margin-top: 10px; }
+  @media only screen and (max-width: 1400px) {
+    .home .posts {
+      grid-template-columns: repeat(3, 1fr); } }
+  @media only screen and (max-width: 1000px) {
+    .home .posts {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media only screen and (max-width: 750px) {
+    .home .posts {
+      grid-template-columns: repeat(1, 1fr); } }
 
 .default .navigation {
   height: 100vh;

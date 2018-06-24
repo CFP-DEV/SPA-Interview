@@ -1,9 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Components
+import Spinner from '../../../components/Spinner';
 import Post from './Post';
 
-const Posts = ({data}) => {
+const Posts = ({data, isFetching}) => {
+    if (isFetching) {
+        return <Spinner />
+    }
+
     return (
         <article className="posts">
             {
@@ -13,6 +19,11 @@ const Posts = ({data}) => {
             }
         </article>
     );
+}
+
+Posts.propTypes = {
+    data: PropTypes.array.isRequired,
+    isFetching: PropTypes.bool.isRequired
 }
 
 export default Posts;
