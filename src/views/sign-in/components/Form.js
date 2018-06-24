@@ -43,10 +43,12 @@ class Form extends Component {
             return;
         }
 
-        this.setState({
-            emailValidation: '',
-            passwordValidation: '',
-        });
+        // Sign In
+        let user = {
+            email: this.state.email,
+        }
+
+        localStorage.setItem('user', user);
     }
 
     render () {

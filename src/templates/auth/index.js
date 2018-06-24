@@ -10,7 +10,27 @@ import SignIn from '../../views/sign-in/index';
 import Navigation from './components/Navigation';
 
 class Auth extends Component {
+    constructor () {
+        super();
+
+        this.state = {
+            userActive: false,
+        }
+    }
+
+    componentDidMount () {
+        if (localStorage.getItem('user')) {
+            this.setState({
+                userActive: true,
+            });
+        }
+    }
+
     render () {
+        if (this.state.userActive) {
+            return <Redirect to="/" />;
+        }
+
         return (
             <div className="auth">
                 

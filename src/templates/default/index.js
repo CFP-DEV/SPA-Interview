@@ -9,7 +9,33 @@ import Profile from '../../views/profile/index'
 import Navigation from './components/Navigation';
 
 class Default extends Component {
+    constructor () {
+        super();
+
+        this.state = {
+            userActive: false,
+            userChecking: true,
+        }
+    }
+
+    componentDidMount () {
+        if (localStorage.getItem('user')) {
+            this.setState({
+                userActive: true,
+                userChecking: false,
+            });
+        } else {
+            this.setState({
+                userChecking: false,
+            });
+        }
+    }
+
     render () {
+        if (!this.state.userChecking && !this.state.userActive) {
+            return <Redirect to="/auth/sign-in" />
+        }
+
         return (
             <div className="default">
 
