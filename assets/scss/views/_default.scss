@@ -26,6 +26,17 @@
             padding: 20px 0;
             border-top: 1px solid $gray;
             border-bottom: 1px solid $gray;
+            display: flex;
+            flex-wrap: wrap;
+
+            &__item {
+                height: 60px;
+                width: 60px;
+
+                &:last-child {
+                    align-self: flex-end;
+                }
+            }
 
             &__link {
                 height: 60px;

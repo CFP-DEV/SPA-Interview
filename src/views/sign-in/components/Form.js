@@ -49,6 +49,9 @@ class Form extends Component {
         }
 
         localStorage.setItem('user', user);
+
+        // Redirect
+        this.props.signIn();
     }
 
     render () {

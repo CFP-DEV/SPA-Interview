@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Logo = ({className}) => {
     const logoStyles = className ? 'logo ' + className : 'logo';
 
     return (
-        <div className={logoStyles}>
-            L
-        </div>
+        <Link to="/" className={logoStyles}>
+            S
+        </Link>
     );
 }
 

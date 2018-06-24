@@ -18,6 +18,14 @@ class Default extends Component {
         }
     }
 
+    signOut = () => {
+        // Sign Out
+        localStorage.removeItem('user');
+
+        // Redirect
+        this.props.history.push('/auth/sign-in');
+    }
+
     componentDidMount () {
         if (localStorage.getItem('user')) {
             this.setState({
@@ -39,7 +47,7 @@ class Default extends Component {
         return (
             <div className="default">
 
-                <Navigation />
+                <Navigation signOut={() => { this.signOut(); }} />
 
                 <div className="default__content">
                     <Switch>

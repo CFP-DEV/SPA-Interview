@@ -4,6 +4,11 @@ import React, { Component } from 'react';
 import Form from './components/Form';
 
 class SignIn extends Component {
+    signIn = () => {
+        // Redirect
+        this.props.history.push('/');
+    }
+
     render () {
         return (
             <div className="sign-in">
@@ -17,7 +22,7 @@ class SignIn extends Component {
                     </h2>
                 </header>
 
-                <Form />
+                <Form signIn={() => { this.signIn(); }} />
 
             </div>
         );

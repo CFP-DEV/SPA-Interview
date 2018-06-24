@@ -5,6 +5,33 @@ import { Helmet } from 'react-helmet';
 import PageHeader from '../../components/PageHeader';
 
 class Profile extends Component {
+    constructor () {
+        super();
+
+        this.state = {
+            email: '',
+            phone: '',
+            location: '',
+            firstName: '',
+            lastName: '',
+            login: ''
+        }
+    }
+
+    onChange = (e) => {
+        this.setState({
+            [e.currentTarget.name]: e.currentTarget.value,
+        });
+    }
+
+    onSubmit = (e) => {
+        e.preventDefault();
+    }
+
+    componentDidMount () {
+        console.log(localStorage.getItem('user'));
+    }
+
     render () {
         return (
             <div className="profile">
@@ -15,42 +42,42 @@ class Profile extends Component {
             
                 <PageHeader title="Profile" subtitle="Manage your data." />
 
-                <form className="profile__form form">
+                <form className="profile__form form" onSubmit={this.onSubmit}>
                     <div className="form__group">
                         <label htmlFor="email" className="form__label">
                             E-mail
                         </label>
-                        <input type="email" className="form__input" />
+                        <input type="email" className="form__input" id="email" name="email" onChange={this.onChange} value={this.state.email} />
                     </div>
                     <div className="form__group">
                         <label htmlFor="phone" className="form__label">
                             Phone Number
                         </label>
-                        <input type="text" className="form__input" />
+                        <input type="text" className="form__input" id="phone" name="phone" onChange={this.onChange} value={this.state.phone} />
                     </div>
                     <div className="form__group">
                         <label htmlFor="location" className="form__label">
                             Location
                         </label>
-                        <input type="text" className="form__input" />
+                        <input type="text" className="form__input" id="location" name="location" onChange={this.onChange} value={this.state.location} />
                     </div>
                     <div className="form__group">
-                        <label htmlFor="location" className="form__label">
+                        <label htmlFor="firstName" className="form__label">
                             First Name
                         </label>
-                        <input type="text" className="form__input" />
+                        <input type="text" className="form__input" id="firstName" name="firstName" onChange={this.onChange} value={this.state.firstName} />
                     </div>
                     <div className="form__group">
-                        <label htmlFor="location" className="form__label">
+                        <label htmlFor="lastName" className="form__label">
                             Last Name
                         </label>
-                        <input type="text" className="form__input" />
+                        <input type="text" className="form__input" id="lastName" name="lastName" onChange={this.onChange} value={this.state.lastName} />
                     </div>
                     <div className="form__group">
-                        <label htmlFor="location" className="form__label">
+                        <label htmlFor="login" className="form__label">
                             Login
                         </label>
-                        <input type="text" className="form__input" />
+                        <input type="text" className="form__input" id="login" name="login" onChange={this.onChange} value={this.state.login} />
                     </div>
                     <div className="form__group">
                         <button type="submit" className="btn btn--is-red">
@@ -58,7 +85,6 @@ class Profile extends Component {
                         </button>
                     </div>
                 </form>
-
             </div>
         );
     }
