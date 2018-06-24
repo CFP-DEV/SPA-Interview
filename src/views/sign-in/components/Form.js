@@ -48,7 +48,7 @@ class Form extends Component {
             email: this.state.email,
         }
 
-        localStorage.setItem('user', user);
+        localStorage.setItem('user', JSON.stringify(user));
 
         // Redirect
         this.props.signIn();

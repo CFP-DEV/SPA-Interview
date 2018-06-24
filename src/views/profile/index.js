@@ -26,10 +26,24 @@ class Profile extends Component {
 
     onSubmit = (e) => {
         e.preventDefault();
+
+        // Update User's Info
+        localStorage.setItem('user', JSON.stringify(this.state));
     }
 
     componentDidMount () {
-        console.log(localStorage.getItem('user'));
+        if (localStorage.getItem('user')) {
+            let user = JSON.parse(localStorage.getItem('user'));
+
+            this.setState({
+                email: user.email,
+                phone: user.phone ? user.phone : '',
+                location: user.location ? user.location : '',
+                firstName: user.firstName ? user.firstName : '',
+                lastName: user.lastName ? user.lastName : '',
+                login: user.login ? user.login : ''
+            });
+        }
     }
 
     render () {
