@@ -1,4 +1,6 @@
 .auth {
+    padding: 140px 40px 0 40px;
+
     .navigation {
         height: 140px;
         width: 100%;
@@ -18,30 +20,21 @@
                 margin-right: 20px;
                 font-size: 12px;
             }
+
+            @media only screen and (max-width: 460px) {
+                span {
+                    display: none;
+                }
+            }
         }
     }
 
     &__content {
-        min-height: 100vh;
+        min-height: calc(100vh - 140px);
         width: 100%;
 
-        .header {
-            margin-bottom: 40px;
-            width: 100%;    
-
-            &__title {
-                font-size: 24px;
-            }
-
-            &__subtitle {
-                font-size: 14px;
-                color: $gray;
-                margin-top: 10px;
-            }
-        }
-
         .sign-in, .sign-up {
-            min-height: 100vh;
+            min-height: inherit;
             max-width: 540px;
             display: flex;
             align-content: center;
@@ -51,6 +44,39 @@
 
             &__form {
                 width: 100%;
+            }
+
+            .header {
+                margin-bottom: 40px;
+                width: 100%;    
+    
+                &__title {
+                    font-size: 24px;
+                }
+    
+                &__subtitle {
+                    font-size: 14px;
+                    color: $gray;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 460px) {
+        padding: 140px 20px 0 20px;
+
+        .navigation {
+            padding: 20px;
+        }
+
+        &__content {
+            .sign-in, .sign-up {
+                &__form {
+                    .btn {
+                        width: 100%;
+                    }
+                }
             }
         }
     }
