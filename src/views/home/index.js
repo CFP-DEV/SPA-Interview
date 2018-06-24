@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
 
 // Components
 import PageHeader from '../../components/PageHeader';
@@ -29,6 +30,10 @@ class Home extends Component {
     render () {
         return (
             <div className="home">
+
+                <Helmet>
+                    <title>SPA | Home</title>
+                </Helmet>
                 
                 <PageHeader title="Dashboard" subtitle="All news in one place." />
 

@@ -16,5 +16,8 @@
 @import './components/page-header';
 
 // Views & Templates
+@import './views/profile';
+@import './views/home';
+
 @import './views/default';
 @import './views/auth';

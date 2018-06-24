@@ -1,0 +1,15 @@
+.profile {
+    &__form {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+
+        @media only screen and (max-width: 1400px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media only screen and (max-width: 800px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

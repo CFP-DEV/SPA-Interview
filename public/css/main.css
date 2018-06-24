@@ -125,13 +125,53 @@ a {
   background: #EF476F; }
 
 .page-header {
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 20px; }
   .page-header__title {
     font-size: 24px; }
   .page-header__subtitle {
     font-size: 14px;
     margin-top: 10px;
     color: #D4D9E2; }
+
+.profile__form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px; }
+  @media only screen and (max-width: 1400px) {
+    .profile__form {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media only screen and (max-width: 800px) {
+    .profile__form {
+      grid-template-columns: 1fr; } }
+
+.home .posts {
+  width: 100%;
+  display: grid;
+  grid-gap: 20px; }
+  .home .posts .post {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-gap: 20px; }
+    .home .posts .post__author__avatar {
+      height: 60px;
+      width: 60px;
+      background: #1B1F3B;
+      color: #FFFFFF;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px; }
+    .home .posts .post__content__title {
+      font-size: 14px;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #F4F4F4; }
+    .home .posts .post__content__description {
+      font-size: 14px;
+      line-height: 18px; }
 
 .default .navigation {
   height: 100vh;
