@@ -38,7 +38,7 @@ class Form extends Component {
         if (!emailValidation || !passwordValidation) {
             this.setState({
                 emailValidation: emailValidation ? '' : `E-mail is required.`,
-                passwordValidation: passwordValidation ? '' : `Password is required.`
+                passwordValidation: passwordValidation ? '' : `Password is required (Min. 4 characters).`
             });
             
             return;
@@ -79,7 +79,7 @@ class Form extends Component {
                     <label htmlFor="password" className="form__label">
                         Password
                     </label>
-                    <input type="text" className="form__input" id="password" name="password" onChange={this.onChange} value={this.state.password} />
+                    <input type="password" className="form__input" id="password" name="password" onChange={this.onChange} value={this.state.password} />
                     { this.state.passwordValidation ? <div className="form__message">{this.state.passwordValidation}</div> : '' }
                 </div>
                 <div className="form__group">
