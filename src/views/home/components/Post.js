@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Post = ({data}) => {
     const description = data.body.slice(0, 60) + '...';
@@ -15,6 +16,13 @@ const Post = ({data}) => {
             </header>    
         </article>
     );
+}
+
+Post.propTypes = {
+    data: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        body: PropTypes.string.isRequired
+    }),
 }
 
 export default Post;

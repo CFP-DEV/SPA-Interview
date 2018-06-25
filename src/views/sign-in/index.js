@@ -11,7 +11,7 @@ class SignIn extends Component {
 
     render () {
         return (
-            <div className="sign-in">
+            <section className="sign-in">
                 
                 <header className="header">
                     <h1 className="header__title">
@@ -24,7 +24,7 @@ class SignIn extends Component {
 
                 <Form signIn={() => { this.signIn(); }} />
 
-            </div>
+            </section>
         );
     }
 }

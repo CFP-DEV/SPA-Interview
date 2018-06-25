@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 class Form extends Component {
@@ -89,6 +90,10 @@ class Form extends Component {
             </form>
         );
     }
+}
+
+Form.propTypes = {
+    signIn: PropTypes.func.isRequired,
 }
 
 export default Form;

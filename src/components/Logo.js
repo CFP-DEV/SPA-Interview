@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const Logo = ({className}) => {
@@ -9,6 +10,10 @@ const Logo = ({className}) => {
             S
         </Link>
     );
+}
+
+Logo.propTypes = {
+    className: PropTypes.string,
 }
 
 export default Logo;

@@ -48,7 +48,7 @@ class Profile extends Component {
 
     render () {
         return (
-            <div className="profile">
+            <section className="profile">
 
                 <Helmet>
                     <title>SPA | Profile</title>
@@ -99,7 +99,7 @@ class Profile extends Component {
                         </button>
                     </div>
                 </form>
-            </div>
+            </section>
         );
     }
 }

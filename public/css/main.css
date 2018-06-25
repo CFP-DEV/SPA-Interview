@@ -49,8 +49,14 @@ a {
   background: transparent;
   border: none;
   border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   font-size: 12px;
   text-transform: uppercase;
@@ -118,8 +124,14 @@ a {
   width: 60px;
   border-radius: 8px;
   color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   font-size: 18px;
   background: #EF476F; }
@@ -180,6 +192,7 @@ a {
     background: #F4F4F4;
     border-radius: 8px;
     display: grid;
+    -ms-flex-line-pack: end;
     align-content: end;
     padding: 20px; }
     .home .posts .post__header__title {
@@ -212,8 +225,14 @@ a {
     width: 60px;
     border-radius: 8px;
     color: #FFFFFF;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     font-size: 14px;
     background: #1B1F3B; }
@@ -223,18 +242,28 @@ a {
     padding: 20px 0;
     border-top: 1px solid #D4D9E2;
     border-bottom: 1px solid #D4D9E2;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
     .default .navigation__menu__item {
       height: 60px;
       width: 60px; }
       .default .navigation__menu__item:last-child {
+        -ms-flex-item-align: end;
         align-self: flex-end; }
     .default .navigation__menu__link {
       height: 60px;
       width: 60px;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
       font-size: 18px; }
       .default .navigation__menu__link:hover {
@@ -242,10 +271,52 @@ a {
     .default .navigation__menu__link--is-active {
       color: #EF476F; }
 
+.default .navigation--is-active {
+  left: 0 !important; }
+
+.default .navigation--is-active ~ .default__content {
+  left: 140px;
+  width: calc(100% - 140px); }
+
+.default .navigation--is-active ~ .navigation-mobile-btn {
+  margin-left: 160px; }
+
+.default .navigation-mobile-btn {
+  display: none;
+  height: 60px;
+  width: 40px;
+  padding: 0;
+  margin: 20px 20px 0 20px; }
+  .default .navigation-mobile-btn__stripe {
+    height: 5px;
+    border-top-right-radius: 2.5px;
+    border-bottom-right-radius: 2.5px;
+    display: block;
+    background: #1B1F3B;
+    margin-top: 6.4px; }
+    .default .navigation-mobile-btn__stripe:nth-child(1), .default .navigation-mobile-btn__stripe:nth-child(2) {
+      width: 100%; }
+    .default .navigation-mobile-btn__stripe:nth-child(3) {
+      width: 75%; }
+
 .default__content {
   width: calc(100% - 140px);
   margin: 0 0 0 140px;
-  padding: 40px; }
+  padding: 40px;
+  position: relative; }
+
+@media only screen and (max-width: 640px) {
+  .default .navigation {
+    left: -140px; }
+  .default .navigation-mobile-btn {
+    display: block; }
+  .default .default__content {
+    margin: 0;
+    width: 100%; } }
+
+@media only screen and (max-width: 640px) {
+  .default .default__content {
+    padding: 20px; } }
 
 .auth {
   padding: 140px 40px 0 40px; }
@@ -255,12 +326,22 @@ a {
     position: fixed;
     top: 0;
     left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 40px; }
     .auth .navigation__sign-in, .auth .navigation__sign-up {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center; }
       .auth .navigation__sign-in span, .auth .navigation__sign-up span {
         margin-right: 20px;
@@ -274,9 +355,15 @@ a {
     .auth__content .sign-in, .auth__content .sign-up {
       min-height: inherit;
       max-width: 540px;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -ms-flex-line-pack: center;
       align-content: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       margin: 0 auto; }
       .auth__content .sign-in__form, .auth__content .sign-up__form {

@@ -15,6 +15,7 @@ class Default extends Component {
         this.state = {
             userActive: false,
             userChecking: true,
+            navActive: false,
         }
     }
 
@@ -24,6 +25,20 @@ class Default extends Component {
 
         // Redirect
         this.props.history.push('/auth/sign-in');
+    }
+
+    showMenu = () => {
+        this.setState({
+            navActive: !this.state.navActive,
+        });
+    }
+
+    onResize = () => {
+        if (window.innerWidth >= 640 && this.state.navActive) {
+            this.setState({
+                navActive: false,
+            });
+        }
     }
 
     componentDidMount () {
@@ -37,6 +52,14 @@ class Default extends Component {
                 userChecking: false,
             });
         }
+
+        // Event Listener
+        window.addEventListener('resize', this.onResize);
+    }
+
+    componentWillUnmount () {
+        // Remove Event Listener
+        window.removeEventListener('resize', this.onResize);
     }
 
     render () {
@@ -47,7 +70,13 @@ class Default extends Component {
         return (
             <div className="default">
 
-                <Navigation signOut={() => { this.signOut(); }} />
+                <Navigation signOut={() => { this.signOut(); }} isActive={this.state.navActive} />
+
+                <button className="navigation-mobile-btn btn" onClick={() => { this.showMenu(); }}>
+                    <span className="navigation-mobile-btn__stripe"></span>
+                    <span className="navigation-mobile-btn__stripe"></span>
+                    <span className="navigation-mobile-btn__stripe"></span>
+                </button>
 
                 <div className="default__content">
                     <Switch>

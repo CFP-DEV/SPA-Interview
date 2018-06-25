@@ -6,7 +6,7 @@ import Form from './components/Form';
 class SignUp extends Component {
     render () {
         return (
-            <div className="sign-up">
+            <section className="sign-up">
             
                 <header className="header">
                     <h1 className="header__title">
@@ -19,7 +19,7 @@ class SignUp extends Component {
 
                 <Form />
 
-            </div>
+            </section>
         );
     }
 }

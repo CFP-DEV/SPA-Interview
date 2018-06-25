@@ -11,13 +11,13 @@ const Posts = ({data, isFetching}) => {
     }
 
     return (
-        <article className="posts">
+        <section className="posts">
             {
                 data.map(post => 
                     <Post key={post.id} data={post} />
                 )
             }
-        </article>
+        </section>
     );
 }
 
